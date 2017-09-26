@@ -9,35 +9,44 @@
 
 using namespace std;
 
-class serial()
-{
-    public:
-        static int count;
-    private:
-        serial():{count++;}
-    
+class serial{ 
+	private:
+		static int count;
+	public:
+		serial(){};
+		serial(const serial&) {
+			count++; 
+		}
+		int getCount(){    // display information
+        	return count;
+    	}
 };
 
 // Constants, Structs, Classes
 int serial::count=0;
 
-
 // Prototypes
-
+void ShowSerial(serial s);
 
 
 // Main Program Program
 
-int main()
-{
-    
-    serial alpha, beta, gamma; //make some objects
-    ShowSerial(alpha);
-    ShowSerial(beta);
-    ShowSerial(gamma);
+int main() {
 
-    return 0;
-    
+	serial alpha, beta, gamma; //make some objects
+	ShowSerial(alpha);
+	ShowSerial(beta);
+	ShowSerial(gamma);
+	ShowSerial(alpha);
+	ShowSerial(alpha);
+	ShowSerial(alpha);
+	ShowSerial(alpha);
+	ShowSerial(beta);
+	return 0;
+
+}
+void ShowSerial(serial s) {
+	cout << "I am object number " << s.getCount() << endl;
 }
 
 // Function Definitions
