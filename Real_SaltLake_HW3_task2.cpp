@@ -9,8 +9,17 @@
 
 using namespace std;
 
-// Constants, Structs, Classes
+class serial()
+{
+    public:
+        static int count;
+    private:
+        serial():{count++;}
+    
+};
 
+// Constants, Structs, Classes
+int serial::count=0;
 
 
 // Prototypes
@@ -19,11 +28,16 @@ using namespace std;
 
 // Main Program Program
 
-int main(void) {
-
+int main()
+{
+    
+    serial alpha, beta, gamma; //make some objects
+    ShowSerial(alpha);
+    ShowSerial(beta);
+    ShowSerial(gamma);
 
     return 0;
-
+    
 }
 
 // Function Definitions
