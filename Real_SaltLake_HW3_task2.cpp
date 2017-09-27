@@ -12,13 +12,11 @@ using namespace std;
 class serial{ 
 	private:
 		static int count;
+		int serialnumber;
 	public:
-		serial(){};
-		serial(const serial&) {
-			count++; 
-		}
+		serial(){serialnumber=count++;}
 		int getCount(){    // display information
-        	return count;
+        	return serialnumber;
     	}
 };
 
