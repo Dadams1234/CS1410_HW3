@@ -21,7 +21,7 @@ class serial{
 };
 
 // Constants, Structs, Classes
-int serial::count=0;
+int serial::count=1;
 
 // Prototypes
 void ShowSerial(serial s);
@@ -35,11 +35,7 @@ int main() {
 	ShowSerial(alpha);
 	ShowSerial(beta);
 	ShowSerial(gamma);
-	ShowSerial(alpha);
-	ShowSerial(alpha);
-	ShowSerial(alpha);
-	ShowSerial(alpha);
-	ShowSerial(beta);
+
 	return 0;
 
 }
